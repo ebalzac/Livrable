@@ -222,7 +222,7 @@ section section .subtitle { font-size: 150%; }
 .title abbr { font-variant: small-caps; }
 .title em, .title i { font-style: normal; }
 i .title, .i .title { font-style: normal; }
-.titlePage { text-align: center; margin-top: 3em; page-break-before: right; }
+.titlePage { text-align: center; margin-top: 3em;}
 .titlePage h1.sub { font-weight: normal; margin-top: 0; padding-top: 0; font-size: 85%; }
 .titlePage p, .titlePage blockquote, .titlePage .l { text-align: center; text-indent: 0; margin-left: auto; margin-right: auto; }
 .titlePage p { margin-top: 1em; margin-bottom: 1em; }

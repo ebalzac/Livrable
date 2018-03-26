@@ -17,10 +17,10 @@ else date_default_timezone_set("Europe/Paris");
 
 if (realpath($_SERVER['SCRIPT_FILENAME']) != realpath(__FILE__)); // file is include do nothing
 else if (php_sapi_name() == "cli") {
-  Livrable_Tei2epub::cli();
+  Livrablebalzac_Tei2epub::cli();
 }
 
-class Livrable_Tei2epub
+class Livrablebalzac_Tei2epub
 {
   /** Static parameters, used for example to communicate between XSL tests and calls */
   public $p=array(
@@ -534,7 +534,7 @@ in $kindlegen
           self::mobi($srcfile, $destfile);
         }
         else {
-          $livre = new Livrable_Tei2epub( $srcfile, STDERR );
+          $livre = new Livrablebalzac_Tei2epub( $srcfile, STDERR );
           $livre->epub( $destfile );
         }
       }
