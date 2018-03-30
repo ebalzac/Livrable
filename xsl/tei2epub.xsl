@@ -12,7 +12,7 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
 <p> : no @class, but @align
 -->
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.1" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xmlns:opf="http://www.idpf.org/2007/opf" exclude-result-prefixes="epub html tei opf" extension-element-prefixes="">
-  <xsl:import href="../../Teinte/tei2html.xsl"/>
+  <xsl:import href="../../Teinte-ebalzac/tei2html.xsl"/>
   <!-- ensure override on common -->
   <xsl:include href="epub.xsl"/>
   <xsl:output indent="yes" method="xml" encoding="UTF-8"/>
