@@ -103,6 +103,7 @@ http://wiki.mobileread.com/wiki/Adobe_Digital_Editions#Page-map
         </xsl:choose>
       </xsl:if>
       <item id="titlePage" media-type="application/xhtml+xml" href="titlePage{$_html}"/>
+      <item id="avertissement" media-type="application/xhtml+xml" href="avertissement{$_html}"/>
       <item id="toc" media-type="application/xhtml+xml" href="toc{$_html}" properties="nav"/>
       <xsl:if test="$fnpage != ''">
         <item id="{$fnpage}" media-type="application/xhtml+xml" href="{$fnpage}{$_html}"/>
@@ -138,6 +139,7 @@ http://wiki.mobileread.com/wiki/Adobe_Digital_Editions#Page-map
         <itemref idref="coverhtml"/>
       </xsl:if>
       <itemref idref="titlePage"/>
+      <itemref idref="avertissement"/>
       <xsl:apply-templates select="$TEI/*" mode="opf">
         <xsl:with-param name="type">spine</xsl:with-param>
       </xsl:apply-templates>

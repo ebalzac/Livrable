@@ -144,6 +144,13 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
                     </xsl:call-template>
                   </a>
                 </li>
+                <li>
+                  <a href="avertissement{$_html}">
+                    <xsl:call-template name="message">
+                      <xsl:with-param name="id">Avertissement</xsl:with-param>
+                    </xsl:call-template>
+                  </a>
+                </li>
                 <xsl:apply-templates select="/*/tei:text/tei:front" mode="li"/>
                 <xsl:apply-templates select="/*/tei:text/tei:body" mode="li"/>
                 <xsl:apply-templates select="/*/tei:text/tei:group" mode="li"/>

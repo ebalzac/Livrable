@@ -90,6 +90,16 @@
                 </navLabel>
                 <content src="titlePage{$_html}"/>
               </navPoint>
+              <navPoint id="avertissement" playOrder="3">
+                <navLabel>
+                  <text>
+                    <xsl:call-template name="message">
+                      <xsl:with-param name="id">avertissement</xsl:with-param>
+                    </xsl:call-template>
+                  </text>
+                </navLabel>
+                <content src="avertissement{$_html}"/>
+              </navPoint>
             </xsl:when>
             <xsl:otherwise>
               <navPoint id="titlePage" playOrder="1">
@@ -101,6 +111,16 @@
                   </text>
                 </navLabel>
                 <content src="titlePage{$_html}"/>
+              </navPoint>
+              <navPoint id="avertissement" playOrder="2">
+                <navLabel>
+                  <text>
+                    <xsl:call-template name="message">
+                      <xsl:with-param name="id">avertissement</xsl:with-param>
+                    </xsl:call-template>
+                  </text>
+                </navLabel>
+                <content src="avertissement{$_html}"/>
               </navPoint>
             </xsl:otherwise>
           </xsl:choose>
