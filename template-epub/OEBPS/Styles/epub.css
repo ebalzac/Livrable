@@ -102,6 +102,19 @@ a.bookmark {
     font-size: 60%;
 }
 
+li.bibl { /*  TEI, citation bibliographique */
+    list-style: circle;
+} /* like li.witness */
+
+blockquote .bibl {
+    margin-left: 2em;
+    display: block;
+}
+
+cite { /*  à conserver */
+    font-style: normal;
+}
+
 nav a {
     border-bottom: none;
 }
@@ -533,7 +546,6 @@ i .title,
 .i .title {
     font-style: normal;
 }
-
 
 .titlePage p,
 .titlePage blockquote,
@@ -1389,7 +1401,7 @@ colophon a {
     text-align: center;
 }
 
-/* -------------------------------------------------  SELECTEURS INUTILES A PRIORI : à confirmer avec Maxime ---------------------------------------------- */
+/* -------------------------------------------------  SELECTEURS INUTILES A PRIORI ---------------------------------------------- */
 
 .todo {
     border: #F00 solid 1px;
@@ -1514,31 +1526,6 @@ dd {
     text-align: justify;
 }
 
-code { /*  sert à citer du code informatique ! */
-    font-size: 13px;
-}
-
-samp { /*  affiche le résultat d'un code informatique! */
-    font-family: inherit;
-    font-style: italic;
-}
-
-kbd { /* indique un keyboard ! */
-    font-family: inherit;
-    font-variant: small-caps;
-}
-
-pre { /* displays text with unusual formatting */
-    white-space: pre;
-    font-family: "Lucida Console", Courier, "MS Courier New", monospace;
-}
-pre { /* displays text with unusual formatting */
-    width: 95%;
-    line-height: 100%;
-    border-left: 1px dotted #808080;
-    padding-left: 10px;
-}
-
 big {
     font-weight: normal;
     font-size: 180%;
@@ -1546,10 +1533,6 @@ big {
 
 small {
     font-weight: normal;
-}
-
-cite {
-    font-style: normal;
 }
 
 dfn {
@@ -1561,14 +1544,6 @@ hr {
     border-left: none;
     border-top: 1px solid #E2DED0;
     border-bottom: 1px solid #999;
-}
-
-.front > div.castList { /*  gère la liste des personnages au théâtre */
-    page-break-before: right;
-}
-
-ul.castList {
-    list-style: none;
 }
 
 header ul {
@@ -1584,26 +1559,10 @@ caption {
     padding: 4px 2em 2px 2em;
 }
 
-details { /*  créé un widget déroulant contenant des details visible ou hidden */
-    display: block;
-
-}
-details > * {
-    display: none;
-}
-
-details.minus > * {
-    display: inherit;
-}
-
-details summary {
-    display: inherit;
-}
-
 thead { /*  en tete d'un tableau */
     background-color: #E2DED0;
 }
-tfoot {  /*  pied de page d'un tableau */
+tfoot { /*  pied de page d'un tableau */
     border-top: solid 1px #000000;
 }
 
@@ -1612,11 +1571,7 @@ form label {
     line-height: 100%;
 }
 
-select { /*  créé un drop-down list ! */
-    padding: 0 0.5ex;
-}
-
-mark,  /* highlighte une sélection de texte */
+mark, /* highlighte une sélection de texte */
 b.mark,
 a.mark {
     background-color: #FFC;
@@ -1625,15 +1580,6 @@ a.mark {
 
 div.author { /* TEI, nom d'un auteur dans des refs bibliographiques */
     font-variant: small-caps;
-}
-
-li.bibl { /*  TEI, citation bibliographique */
-    list-style: circle;
-} /* like li.witness */
-
-blockquote .bibl {
-    margin-left: 2em;
-    display: block;
 }
 
 .availability { /* TEI, indique restriction, copyrights, licences éventuelles */
@@ -1652,11 +1598,7 @@ blockquote .bibl {
     font-variant: small-caps;
 }
 
-.choice { /*  TEI, différentes possibilités d'encodage */
-    background-color: #EEEEEE
-}
-
-.fileDesc { /* TEI, si le TEI header saute, ça disparait ? */
+.fileDesc { /* TEI */
     text-align: center;
 }
 .fileDesc > .titleStmt {
