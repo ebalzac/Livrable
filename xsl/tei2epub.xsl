@@ -455,7 +455,7 @@ param id allow to override the default mecanism for file name
     <xsl:value-of select="translate(., $lc, $uc)"/>
   </xsl:template>
   <!-- epub supposed to be read, no facs things like runing titles -->
-  <xsl:template match="tei:fw"/>
+  <!-- <xsl:template match="tei:fw"/> -->
   <xsl:template match="tei:g">
     <xsl:apply-templates/>
   </xsl:template>
