@@ -627,7 +627,7 @@ i .title,
     margin-bottom: 0.5em; /* La marge au dessus de la CH */
 }
 
-.titlePart.intermediate { /*  titre de l'ouvrage */
+.titlePart:nth-child(4n) { /*  concerne le titre de l'ouvrage uniquement */
     font-size: 200%;
     margin-top: 2em;
     letter-spacing: .05em;
@@ -696,7 +696,17 @@ p.salute {
 
 /*  -------------------------------- CORPS DE TEXTE --------------------------------- */
 
+/*  ---------------- gestion des parties --------------- */
+
+h1 .part { /*  espace le numéro de la partie de son titre */
+    font-size: 0.85em;
+    font-style: normal; /* passe les itals en romain */
+    margin-bottom: 3rem;
+}
+
+
 /*  ---------------- gestion des paragraphes ------------- */
+
 p {
     margin: 0;
     text-align: justify;
@@ -799,7 +809,7 @@ h1 a:hover {
     border-bottom-color: inherit;
 }
 
-h1.head { /*  concerne les titres de parties exclusivement */
+h1 { /*  concerne tous les h1, même les titres de parties */
     margin-bottom: 3em;
 }
 
@@ -867,7 +877,6 @@ p.right {
 div.right {
     margin-left: 25%;
 }
-
 
 .center, /*  concerne de rares éléments centrés */
 div.center {
@@ -988,6 +997,7 @@ table a:hover {
 
 td.i {
     font-style: italic;
+    width: 100% /*  force le tableau à se ferrer à droite ET à gauche */
 } /*  petites misères de la vie conjugale, illusions perdues */
 td.right {
     text-align: right;
@@ -1009,8 +1019,8 @@ tr.total td.i {
     font-variant: small-caps;
 } /*  petites misères de la vie conjugale */
 table {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 } /*  petites misères de la vie conjugale */
 
 /* -------------- gestion des poèmes et vers seuls ---------------- */
@@ -1018,14 +1028,14 @@ table {
 div .poem { /* poème */
     margin-top: 2em;
     margin-bottom: 2em;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
     font-size: 100%;
 }
 
 div.lg { /*  groupe de vers */
-    margin-top: 0.7em;
-    margin-bottom: 0.7em;
+    margin-top: 2em; /* 0.7 */
+    margin-bottom: 2em; /* 0.7 */
 }
 
 div.l { /*  ligne unique de vers, y compris dans les poèmes */
@@ -1037,16 +1047,16 @@ div.l { /*  ligne unique de vers, y compris dans les poèmes */
 }
 
 .quote div.l { /*  ligne unique de vers, hors poèmes */
-    margin-left: 2em;
+    margin-left: 3em;
 }
 
 /* ---------------- gestion des lettres ------------------ */
 
 div .letter { /*  blancs autour des lettres */
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
 .letter > .dateline {
@@ -1091,10 +1101,10 @@ div .letter { /*  blancs autour des lettres */
 /* ---------------------- gestion des press ------------------------ */
 
 .press {
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 1em; /*  vérifier que ça ne pose pas de problèmes */
-    margin-bottom: 1em; /*  vérifier que ça ne pose pas de problèmes */
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 /* ------------- gestion des pages imprimées insérées --------------- */
