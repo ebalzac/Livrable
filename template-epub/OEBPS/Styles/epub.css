@@ -608,7 +608,8 @@ i .title,
     width: 7%;
 }
 
-.titlePart.main { /*  "La Comédie humaine" */
+.titlePart.main,
+.titlePart.group { /*  "La Comédie humaine" */
     font-size: 140%;
     margin-top: 0.7em;
     margin-bottom: 0.5em;
@@ -859,7 +860,9 @@ sub { /*  sub gère les appels de notes, les astérismes */
     font-variant: normal;
     line-height: 5%;
     font-size: 65%;
+    color: black;
 }
+
 sup { /*  sup = exposant */
     vertical-align: super;
 }
@@ -1050,6 +1053,9 @@ div.l { /*  ligne unique de vers, y compris dans les poèmes */
     margin-left: 3em;
 }
 
+.poem .indent{ /*  indentation de certains poèmes */
+    margin-left: 2em;
+}
 /* ---------------- gestion des lettres ------------------ */
 
 div .letter { /*  blancs autour des lettres */
@@ -1094,7 +1100,7 @@ div .letter { /*  blancs autour des lettres */
 .legal {
     margin-left: 2em;
     margin-right: 2em;
-    margin-top: 1em; /*  vérifier que ça ne pose pas de problèmes */
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
@@ -1131,6 +1137,13 @@ div .letter { /*  blancs autour des lettres */
 .narrative.q.olympia .label { /* la muse du dept */
     text-align: center;
     font-weight: bold;
+}
+
+.narrative { /* albert savarus et autres */
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 /* --------- gestion des appels de notes et notes de bdp --------------- */
