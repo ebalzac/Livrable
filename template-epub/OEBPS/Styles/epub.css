@@ -704,19 +704,22 @@ p.salute {
 
 /*  ---------------- gestion des parties --------------- */
 
-h1 .part { /*  espace le numéro de la partie de son titre */
+h1 .part { /*  espace le numéro de la partie en créant un blanc */
     font-size: 0.85em;
     font-style: normal; /* passe les itals en romain */
     margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-top: 5em;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    width: auto;
+    padding-bottom: 0.5em;
+    line-height:150%
 }
 
 h1 em{
-    margin-bottom: 2em;
-}
-
-.rule h1 .part { /* filet sous le nom du numéro de partie */
-    margin-top: 5em;
-    width: 5em;
+    border-bottom: 0.08em solid transparent; /*  filet transparent permettant de créer un blanc artificiel */
 }
 
 /*  ---------------- gestion des paragraphes ------------- */
