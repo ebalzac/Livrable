@@ -660,6 +660,11 @@ i .title,
     line-height: 2em;
 }
 
+.principal {
+    margin-bottom: 0.7em;
+    font-weight: bold;
+}
+
 /* ---------------------------------- DEDICACES, PREFACES EN FRONT-1 ---------------------------------------- */
 
 .preface .dateline { /*  hist des treize */
@@ -1056,7 +1061,12 @@ div.l { /*  ligne unique de vers, y compris dans les poèmes */
 .poem .indent{ /*  indentation de certains poèmes */
     margin-left: 2em;
 }
+
 /* ---------------- gestion des lettres ------------------ */
+
+.letter .indent { /*  indentation de certaines lettres */
+      margin-left: 2em;  
+}
 
 div .letter { /*  blancs autour des lettres */
     margin-top: 2em;
