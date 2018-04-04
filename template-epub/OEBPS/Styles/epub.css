@@ -708,13 +708,14 @@ h1 .part { /*  espace le numéro de la partie de son titre */
     font-size: 0.85em;
     font-style: normal; /* passe les itals en romain */
     margin-bottom: 1em;
-    margin: auto;
+}
+
+h1 em{
+    margin-bottom: 2em;
 }
 
 .rule h1 .part { /* filet sous le nom du numéro de partie */
-    margin-top: 1em;
-    margin-bottom: 1em;
-    text-align: center;
+    margin-top: 5em;
     width: 5em;
 }
 
@@ -1050,8 +1051,8 @@ div .poem { /* poème */
 }
 
 div.lg { /*  groupe de vers */
-    margin-top: 2em; /* 0.7 */
-    margin-bottom: 2em; /* 0.7 */
+    margin-top: 1.2em; /* 0.7 */
+    margin-bottom: 1.2em; /* 0.7 */
 }
 
 div.l { /*  ligne unique de vers, y compris dans les poèmes */
