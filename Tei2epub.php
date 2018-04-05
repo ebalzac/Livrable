@@ -286,7 +286,7 @@ class Livrablebalzac_Tei2epub
     // test first if dst dir (example, epub for sqlite)
     if (isset($destdir)) {
       // create images folder only if images detected
-      if (!file_exists($destdir)) self::dirclean($destdir);
+      //if (!file_exists($destdir)) self::dirclean($destdir);
       // destination
       $i=2;
       // avoid duplicated files
