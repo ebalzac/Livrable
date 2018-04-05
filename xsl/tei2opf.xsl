@@ -130,6 +130,7 @@ http://wiki.mobileread.com/wiki/Adobe_Digital_Editions#Page-map
           </xsl:attribute>
         </item>
       </xsl:for-each>
+      <item href="Images/logo.png" id="logo" media-type="image/png"/>
       <item id="ncx" media-type="application/x-dtbncx+xml" href="toc.ncx"/>
     </manifest>
   </xsl:template>
@@ -148,6 +149,7 @@ http://wiki.mobileread.com/wiki/Adobe_Digital_Editions#Page-map
       </xsl:if>
       <itemref idref="toc"/>
       <xsl:apply-templates mode="opf:template"/>
+      <itemref idref="logo"/>
     </spine>
   </xsl:template>
   <!-- par défaut tout arrêter -->
