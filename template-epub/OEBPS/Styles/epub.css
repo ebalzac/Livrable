@@ -101,6 +101,7 @@ a:hover {
 
 a.bookmark {
     font-size: 60%;
+    /* display: none */
 }
 
 li.bibl { /*  TEI, citation bibliographique */
@@ -110,6 +111,22 @@ li.bibl { /*  TEI, citation bibliographique */
 blockquote .bibl {
     margin-left: 2em;
     display: block;
+}
+
+.epigraph {
+    text-align: right;
+    margin: 1em 0 2em 0;
+}
+
+.epigraph > .bibl {
+    font-size: 0.8em;
+    margin: 0.5em 2em 0 50%;
+}
+
+.epigraph > .p {
+    font-size: 0.8em;
+    text-align: justify;
+    margin: 1em 2em 1em 50%;
 }
 
 cite { /*  à conserver */
@@ -212,6 +229,16 @@ h1.collection {
 .treatise > .closer > .dateline {
     margin: 0.5em 2em 0.5em 0;
 }
+
+/*  .closer > .salute {  /*  idem que roman.min.css
+    text-indent: 6em;
+    margin: 0;
+}*/
+
+/* .opener > .salute { /* idem que roman.min.css
+    text-indent: 3em;
+    margin: 0;
+}  */
 
 h1.desc {
     font-weight: normal;
@@ -374,10 +401,30 @@ a.bookmark:hover {
     color: #808080;
 }
 
+h2.head, /*  idem que roman.min.css */
+h3.head,
+h4.head,
+h5.head {
+    font-size: 120%;
+    text-align: center;
+    margin: 1.5em 0 1.5em 0;
+    line-height: 1.5em;
+}
+
 .center p {
     text-align: inherit;
     text-indent: 0;
 }
+
+.quote.center { /* idem que roman.min.css */
+    text-align: center;
+    text-indent: 0;
+}
+
+/*  .quote {   /* idem que roman.min.css
+    margin: 1em 0 1em 3em;
+}*/
+
 span.center {
     display: block;
 }
@@ -664,6 +711,17 @@ section.preface {
     margin: 0 0 1em 0;
 }
 
+/*  .dedication > .label {  /* idem que roman.min.css
+    text-align: center;
+    font-style: normal;
+    font-size: 1.2em;
+    margin: 0 0 1em 0;
+} */
+
+/* .dedication .p i {
+    font-style: normal;
+} */
+
 .dedication .salute {
     margin-right: 20%;
     font-style: italic;
@@ -675,6 +733,10 @@ p.salute {
     text-indent: 0em;
     font-style: normal;
     text-align: right;
+}
+
+.dedication .opener .salute { /*  idem que roman.min.css */
+    font-style: italic;
 }
 
 /*  -------------------------------- CORPS DE TEXTE --------------------------------- */
@@ -716,6 +778,11 @@ p {
     text-indent: 2em;
 }
 
+.noindent.i, /* idem que roman.min.css */
+.p.i.i {
+    font-style: italic;
+}
+
 .c.drop-cap { /*  lettrine dans petites misères de la vie conjugale */
     display: none;
 }
@@ -743,6 +810,10 @@ i em,
 em i,
 em em {
     font-style: normal;
+}
+
+.l.i { /* idem que roman.min.css */
+    font-style: italic;
 }
 
 /*  ----------------- gestion des h1-h6 -------------------- */
@@ -860,8 +931,13 @@ sub { /*  sub gère les appels de notes, les astérismes */
 
 sup { /*  sup = exposant */
     vertical-align: super;
-}
-
+  /*   font-size: 75%;   
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em; */ 
+    }
+    
 sub {
     vertical-align: sub; /*  sub = indice */
 }
@@ -869,9 +945,11 @@ sub {
 .right { /*  concerne de rares éléments ferrés à droite */
     text-align: right;
 }
+
 p.right {
     margin-bottom: 1em;
 }
+
 div.right {
     margin-left: 25%;
 }
@@ -939,6 +1017,12 @@ div.stage { /* paragraphe indépendant de didascalies */
     margin-left: 2em;
 }
 
+.drama p.speaker {  /*  idem que roman.min.css */
+    text-align: center;
+    font-variant: small-caps;
+    margin: 1.5em 0 0.5em 0;
+}
+
 div.speaker,
 p.speaker {
     margin-top: 1.2em;
@@ -991,25 +1075,30 @@ div.stage.sc {
 table a {
     border: none;
 }
+
 table a:hover {
     border-width: 0;
 }
 
 td.i {
     font-style: italic;
-    width: 100% /*  force le tableau à se ferrer à droite ET à gauche */
+    width: 100%; /*  force le tableau à se ferrer à droite ET à gauche */
 } /*  petites misères de la vie conjugale, illusions perdues */
+
 td.right {
     text-align: right;
     width: 20%;
 } /*  petites misères de la vie conjugale, illusions perdues */
+
 tr.total {
     font-weight: bold;
 } /*  petites misères de la vie conjugale, illusions perdues */
+
 tr.total td.i {
     padding: 1em 4em 1em 0em;
-    text-align: right
+    text-align: right;
 } /*  petites misères de la vie conjugale, illusions perdues */
+
 #pi,
 #pii,
 #piii {
@@ -1044,6 +1133,10 @@ div.l { /*  ligne unique de vers, y compris dans les poèmes */
     padding-left: 1.5em;
     text-indent: -1.5rem;
     padding-left: 1.5rem;
+}
+
+.l.indent{ /* idem roman.min.css */
+      margin-left: 4em;  
 }
 
 .quote div.l { /*  ligne unique de vers, hors poèmes */
@@ -1081,6 +1174,19 @@ div .letter { /*  blancs autour des lettres */
 .dateline {
     text-align: right;
     margin: 2em 0 0 0;
+}
+
+.dateline.end { /* idem que roman.min.css */
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+.dedication .dateline { /*  idem roman.min.css */
+    margin: 0.5em 2em 0.5em 0;
+}
+
+.dateline.epistolary { /*  idem que roman.min.css */
+    margin: 0.5em 2em 0.5em 0;
 }
 
 .letter .salute {
@@ -1256,6 +1362,10 @@ a img {
     text-align: right;
 }
 
+.figure > * {
+    display: inline-block;
+}
+
 .figure {
     line-height: 110%;
     font-size: 85%;
@@ -1264,16 +1374,12 @@ a img {
     border: solid 1px #999;
     text-align: center;
 }
-.figure > * {
-    display: inline-block;
-}
-.figure a {
-    text-decoration: none;
-    border-bottom: none;
-}
-.figure a:hover {
-    text-decoration: none;
-    border-bottom: none;
+
+.figure.lettrine > img {
+    width: 35%;
+    float: left;
+    margin-left: -2.5em;
+    margin-right: 0.5em;
 }
 
 figure {
@@ -1286,6 +1392,15 @@ figure {
     margin-left: auto;
     margin-right: auto;
 }
+
+.figure a {
+    text-decoration: none;
+    border-bottom: none;
+}
+.figure a:hover {
+    text-decoration: none;
+    border-bottom: none;
+}
 figure.left {
     float: left;
     margin: 15px 15px 8px 0;
@@ -1294,9 +1409,32 @@ figure.right {
     float: right;
     margin: 15px 0 8px 15px;
 }
+
+.figure.float-left > img {
+    float: left;
+    width: 40%;
+    margin-left: -2.5em;
+    margin-right: 1em
+}
+
+.figure.float-right > img {
+    float: right;
+    width: 40%;
+    margin-right: -2.5em;
+    margin-left: 1em;
+}
+
 figure img {
     padding: 6px;
+    max-width: 100%; /* idem roman.min.css */
+    height: auto; /* idem roman.min.css */
 }
+
+figure.center > img {
+    max-height: 300px;
+    width: auto;
+}
+
 figure a {
     text-decoration: none;
     border-bottom: none;
