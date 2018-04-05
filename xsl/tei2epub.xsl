@@ -72,37 +72,23 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
         <xsl:text>)</xsl:text>
       </xsl:with-param>
       <xsl:with-param name="content">
-        <xsl:variable name="html">
-          <xsl:choose>
-            <xsl:when test="tei:front/tei:titlePage">
-              <xsl:apply-templates select="tei:front/tei:docAuthor"/>
-              <div class="rule"/>
-              <xsl:apply-templates select="tei:front/tei:docTitle"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:apply-templates select="/*/tei:teiHeader"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>
-        <xsl:choose>
-          <xsl:when test="$format = $epub2">
-            <div class="titlePage">
-              <xsl:copy-of select="$html"/>
-              <div class="docPublisher">
-                <img src="Images/logo.png" alt="logo" class="imgLogo" />
-              </div>
-              
-            </div>
-          </xsl:when>
-          <xsl:otherwise>
             <section epub:type="titlepage" class="titlePage">
-              <xsl:copy-of select="$html"/>
+              <xsl:element name="p">
+                <xsl:attribute name="class">docAuthor</xsl:attribute>
+                <xsl:value-of select="//tei:front/tei:docAuthor"/>
+              </xsl:element>
+              <xsl:element name="div"><xsl:attribute name="rule"/></xsl:element>
+              <xsl:element name="div"><xsl:attribute name="class">docTitle</xsl:attribute>
+              <xsl:for-each select="//tei:front/tei:docTitle/tei:titlePart">
+                <xsl:element name="div">
+                  <xsl:attribute name="class">titlePart <xsl:value-of select="@type"/></xsl:attribute><xsl:value-of select="."/>
+                </xsl:element>
+              </xsl:for-each>
+              </xsl:element>
               <div class="docPublisher">
                 <img src="Images/logo.png" alt="logo" class="imgLogo" />
               </div>
             </section>
-          </xsl:otherwise>
-        </xsl:choose>
       </xsl:with-param>
     </xsl:call-template>
     <!-- Create a toc -->
