@@ -690,6 +690,7 @@ section.preface {
 
 .dedication .salute {
     margin-right: 20%;
+    font-style: italic;
 }
 
 div.salute,
@@ -955,6 +956,12 @@ div.stage { /* paragraphe indépendant de didascalies */
 }
 
 /* ----------------- gestion des dialogues ------------------------ */
+
+.drama .treatise{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+}
 
 div.speaker,
 p.speaker {
