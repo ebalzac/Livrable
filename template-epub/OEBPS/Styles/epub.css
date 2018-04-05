@@ -465,8 +465,7 @@ ul.menu {
 }
 
 div.ornament {
-    line-height: 95%;
-    letter-spacing: 0.6em;
+    letter-spacing: 0.6em; /* 0.6 */
     margin: 1em 5em;
     text-align: center;
     margin-left: auto;
@@ -608,7 +607,7 @@ i .title,
     width: 7%;
 }
 
-.titlePart.main,
+/*  .titlePart.main, :) */
 .titlePart.group { /*  "La Comédie humaine" */
     font-size: 140%;
     margin-top: 0.7em;
@@ -628,7 +627,8 @@ i .title,
     margin-bottom: 0.5em; /* La marge au dessus de la CH */
 }
 
-.titlePart:nth-child(4n) { /*  concerne le titre de l'ouvrage uniquement */
+/*  .titlePart:nth-child(4n) :)*/
+.docTitle .main { /*  concerne le titre de l'ouvrage uniquement */
     font-size: 200%;
     margin-top: 2em;
     letter-spacing: .05em;
@@ -715,10 +715,10 @@ h1 .part { /*  espace le numéro de la partie en créant un blanc */
     margin: auto;
     width: auto;
     padding-bottom: 0.5em;
-    line-height:150%
+    line-height: 150%
 }
 
-h1 em{
+h1 em {
     border-bottom: 0.08em solid transparent; /*  filet transparent permettant de créer un blanc artificiel */
 }
 
@@ -756,6 +756,7 @@ p {
 .italic .title {
     font-style: normal /* Un italique dans un italique est romain */
 }
+
 .title i {
     font-style: normal
 }
@@ -951,7 +952,6 @@ div.stage { /* paragraphe indépendant de didascalies */
     /*  margin-left: 1.5rem; */
     margin-top: 0.5ex;
     margin-bottom: 0.5ex;
-    line-height: 120%;
 }
 
 /* ----------------- gestion des dialogues ------------------------ */
@@ -963,8 +963,6 @@ p.speaker {
     font-weight: normal;
     text-indent: 0;
     text-align: center;
-    font-size: 85%;
-    /*  text-transform: uppercase; */
     font-variant: small-caps;
 }
 
@@ -972,17 +970,17 @@ p.speaker {
 .speaker em {
     font-variant: normal;
     text-transform: none;
-    font-size: 100%;
 }
 
 .sp {
     widows: 2;
     orphans: 2;
 }
+
 .sp p {
     text-indent: 0;
-    line-height: 15%;
 }
+
 div .sp { /* blanc entre les speakers + leur dialogue et le speaker suivant */
     margin-top: 1.7em;
     margin-bottom: 1.7em;
@@ -1002,7 +1000,6 @@ div.stage.sc {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 95%;
     margin-bottom: 1ex;
 }
 
@@ -1070,14 +1067,14 @@ div.l { /*  ligne unique de vers, y compris dans les poèmes */
     margin-left: 3em;
 }
 
-.poem .indent{ /*  indentation de certains poèmes */
+.poem .indent { /*  indentation de certains poèmes */
     margin-left: 2em;
 }
 
 /* ---------------- gestion des lettres ------------------ */
 
 .letter .indent { /*  indentation de certaines lettres */
-      margin-left: 2em;  
+    margin-left: 2em;
 }
 
 div .letter { /*  blancs autour des lettres */
