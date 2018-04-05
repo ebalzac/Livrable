@@ -75,7 +75,9 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
         <xsl:variable name="html">
           <xsl:choose>
             <xsl:when test="tei:front/tei:titlePage">
-              <xsl:apply-templates select="tei:front/tei:titlePage"/>
+              <xsl:apply-templates select="tei:front/tei:docAuthor"/>
+              <div class="rule"/>
+              <xsl:apply-templates select="tei:front/tei:docTitle"/>
             </xsl:when>
             <xsl:otherwise>
               <xsl:apply-templates select="/*/tei:teiHeader"/>
@@ -86,11 +88,18 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
           <xsl:when test="$format = $epub2">
             <div class="titlePage">
               <xsl:copy-of select="$html"/>
+              <div class="docPublisher">
+                <img src="Images/logo.png" alt="logo" class="imgLogo" />
+              </div>
+              
             </div>
           </xsl:when>
           <xsl:otherwise>
             <section epub:type="titlepage" class="titlePage">
               <xsl:copy-of select="$html"/>
+              <div class="docPublisher">
+                <img src="Images/logo.png" alt="logo" class="imgLogo" />
+              </div>
             </section>
           </xsl:otherwise>
         </xsl:choose>

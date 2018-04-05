@@ -103,6 +103,7 @@ http://wiki.mobileread.com/wiki/Adobe_Digital_Editions#Page-map
         </xsl:choose>
       </xsl:if>
       <item id="titlePage" media-type="application/xhtml+xml" href="titlePage{$_html}"/>
+      <item href="Images/logo.png" id="logo" media-type="image/png"/>
       <item id="avertissement" media-type="application/xhtml+xml" href="avertissement{$_html}"/>
       <item id="toc" media-type="application/xhtml+xml" href="toc{$_html}" properties="nav"/>
       <xsl:if test="$fnpage != ''">
