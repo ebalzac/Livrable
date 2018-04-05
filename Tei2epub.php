@@ -176,7 +176,7 @@ class Livrablebalzac_Tei2epub
     else if ( file_exists( $this->p['srcdir'].$this->p['filename'].'.png' )) $cover = $this->p['filename'].'.png';
     else if ( file_exists( $this->p['srcdir'].$this->p['filename'].'.jpg' )) $cover = $this->p['filename'].'.jpg';
     if ( $cover ) {
-      self::dirclean( $destdir.'OEBPS/' . $imagesdir );
+      //self::dirclean( $destdir.'OEBPS/' . $imagesdir );
       copy( $this->p['srcdir'].$cover, $destdir.'OEBPS/'.$imagesdir.$cover);
     }
     if ($cover) $params['cover'] = $imagesdir.$cover;
@@ -286,7 +286,7 @@ class Livrablebalzac_Tei2epub
     // test first if dst dir (example, epub for sqlite)
     if (isset($destdir)) {
       // create images folder only if images detected
-      if (!file_exists($destdir)) self::dirclean($destdir);
+      //if (!file_exists($destdir)) self::dirclean($destdir);
       // destination
       $i=2;
       // avoid duplicated files
