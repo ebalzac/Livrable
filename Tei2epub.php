@@ -176,7 +176,7 @@ class Livrablebalzac_Tei2epub
     else if ( file_exists( $this->p['srcdir'].$this->p['filename'].'.png' )) $cover = $this->p['filename'].'.png';
     else if ( file_exists( $this->p['srcdir'].$this->p['filename'].'.jpg' )) $cover = $this->p['filename'].'.jpg';
     if ( $cover ) {
-      self::dirclean( $destdir.'OEBPS/' . $imagesdir );
+      //self::dirclean( $destdir.'OEBPS/' . $imagesdir );
       copy( $this->p['srcdir'].$cover, $destdir.'OEBPS/'.$imagesdir.$cover);
     }
     if ($cover) $params['cover'] = $imagesdir.$cover;
