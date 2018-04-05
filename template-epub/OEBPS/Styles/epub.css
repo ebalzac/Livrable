@@ -1148,7 +1148,7 @@ div .letter { /*  blancs autour des lettres */
 .narrative.q.olympia .fw.header { /* la muse du dept */
     display: flex;
     justify-content: space-between;
-    font-size: 75%;
+    font-size: 0.6em; /* 75% */
     margin-bottom: 0.5em;
 }
 
