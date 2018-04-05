@@ -217,36 +217,12 @@ h1.desc {
     padding: 0;
     margin: 0;
     font-size: 117%;
-} /* <titlePart type="desc"> */
-/* .body > .div { border-bottom: 1px #CCCCCC solid; padding-bottom: 3em; } */
-
-.entry > * {
-    margin-left: 2em;
-}
-.entry > .form {
-    margin-left: 0;
 }
 
-.floatingText {
-    line-height: 120%;
-    padding: 0% 1% 1% 5%;
-    background-color: #F8F7F4;
-}
-.foreign {
-    font-style: italic;
-}
-.forename {
-    font-variant: normal;
-}
 .form {
     font-weight: bold;
 }
 
-/*
-.l.part-M { margin-left: 3em; text-indent: 0; padding-left: 0; }
-.l.part-F { margin-left: 6em; text-indent: 0; padding-left: 0;  }
-.l.part-Y { text-indent: 3em; }
-*/
 .lb {
     color: grey;
     font-size: 85%;
@@ -1459,30 +1435,6 @@ colophon a {
 
 /* -------------------------------------------------  SELECTEURS INUTILES A PRIORI ---------------------------------------------- */
 
-.todo {
-    border: #F00 solid 1px;
-    background: #FFC;
-    padding: 1ex;
-}
-
-.dialogue {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.dialogue li {
-    line-height: 130%;
-    text-align: justify;
-    margin: 0;
-}
-
-textarea { /* affiche un bloc amovible contenant du texte */
-    width: 100%;
-    height: 20em;
-    display: block;
-}
-
 aside header {
     border: none;
     padding-right: 1em;
@@ -1537,50 +1489,16 @@ div.l.center {
     padding-left: 0;
 }
 
-/*  gère les éléments en sans-serif */
-.argument,
-li.bibl,
-.cb,
-figure,
-.fileDesc > .editionStmt,
-.fileDesc > .publicationStmt,
-.fileDesc > .sourceDesc,
-.figure,
-menu,
-.menu,
-div.note,
-small,
-li.witness {
-    font-family: GothicMB101, Gothic, sans-serif; /* Kobo: sans-serif italic pb */
-}
-
 .dialogue li {
     text-indent: 0.5em;
     text-indent: 0.5rem;
 }
 
-acronym {
-    font-variant: small-caps;
-}
 address {
     font-style: normal;
     line-height: 110%;
 }
 
-
-dl.dl dt { /*  gère des listes définitions html : a priori inutile */
-    font-weight: 900;
-}
-dl.dl dd {
-    text-align: justify;
-    color: #333;
-    margin-top: 0em;
-    margin-bottom: 0.5em;
-}
-
-dd {
-    text-align: justify;
-}
 
 big {
     font-weight: normal;
@@ -1589,10 +1507,6 @@ big {
 
 small {
     font-weight: normal;
-}
-
-dfn {
-    font-style: normal;
 }
 
 hr {
@@ -1615,85 +1529,7 @@ caption {
     padding: 4px 2em 2px 2em;
 }
 
-thead { /*  en tete d'un tableau */
-    background-color: #E2DED0;
-}
-tfoot { /*  pied de page d'un tableau */
-    border-top: solid 1px #000000;
-}
-
 form label {
     padding: 0;
     line-height: 100%;
-}
-
-mark, /* highlighte une sélection de texte */
-b.mark,
-a.mark {
-    background-color: #FFC;
-    font-weight: bold;
-}
-
-div.author { /* TEI, nom d'un auteur dans des refs bibliographiques */
-    font-variant: small-caps;
-}
-
-.availability { /* TEI, indique restriction, copyrights, licences éventuelles */
-    margin: 2em 0;
-    text-align: justify;
-}
-
-.byline { /*  TEI, indique un auteur du document */
-    text-align: right;
-    margin-left: 25%;
-    margin-top: 4ex;
-    text-indent: 0;
-}
-
-.byline .docAuthor {
-    font-variant: small-caps;
-}
-
-.fileDesc { /* TEI */
-    text-align: center;
-}
-.fileDesc > .titleStmt {
-    text-align: center;
-    margin: 0 0 5em 0;
-    line-height: 150%;
-}
-.fileDesc > .editionStmt,
-.fileDesc > .publicationStmt,
-.fileDesc > .sourceDesc {
-    text-align: left;
-    line-height: 120%;
-    font-size: 90%;
-}
-
-div.l dfn.gloss { /* TEI, définit des terms dans un glossaire */
-    display: block;
-    padding: 5px 5px 5px 5px;
-    border-radius: 10px;
-    line-height: 110%;
-    text-align: left;
-    float: right;
-    margin-left: 25em;
-    width: 250px;
-    background-color: #F3F3F3;
-    text-indent: 0;
-}
-
-dfn.gloss {
-    font-size: small;
-}
-
-p dfn.gloss,
-div.gloss {
-    padding: 5px 5px 5px 5px;
-    border-radius: 10px;
-    line-height: 110%;
-    text-align: left;
-    font-size: small;
-    background-color: #F3F3F3;
-    text-indent: 0;
 }
