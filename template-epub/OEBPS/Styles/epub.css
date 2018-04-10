@@ -89,6 +89,7 @@ a {
     color: #336;
 
 }
+
 a:hover {
     background-color: rgba(255, 255, 255, 0.3);
     color: #000;
@@ -104,31 +105,6 @@ a.bookmark {
     /* display: none */
 }
 
-li.bibl { /*  TEI, citation bibliographique */
-    list-style: circle;
-} /* like li.witness */
-
-blockquote .bibl {
-    margin-left: 2em;
-    display: block;
-}
-
-.epigraph {
-    text-align: right;
-    margin: 1em 0 2em 0;
-}
-
-.epigraph > .bibl {
-    font-size: 0.8em;
-    margin: 0.5em 2em 0 50%;
-}
-
-.epigraph > .p {
-    font-size: 0.8em;
-    text-align: justify;
-    margin: 1em 2em 1em 50%;
-}
-
 cite { /*  à conserver */
     font-style: normal;
 }
@@ -136,13 +112,6 @@ cite { /*  à conserver */
 nav a {
     border-bottom: none;
 }
-
-input[readonly],
-input.readonly {
-    background: #CCCCCC;
-}
-
-/* p { orphans: 2; widows: 2; } pb dans .sp */
 
 section { /* contient le texte des parties, chapitres, notes, dédicaces en page de titre, colophon.  */
     clear: both;
@@ -152,63 +121,10 @@ section.div {
     padding-top: 3em;
 }
 
-/** ----------------  TEI ELEMENTS, in TEI element name order, before type modifier in next block ---------------- */
-
-.argument { /* gère des listes ou une description en prose */
-    margin: 0 0 1em 0;
-    text-indent: 0;
-    font-style: italic;
-    text-align: justify;
-    font-size: 85%;
-    line-height: 105%;
-}
-
-p.argument {
-    font-style: normal;
-}
-
-.argument p {
-    text-indent: 0;
-}
-
-/* .back p, .front p { text-indent: 0; } no indent in paratext */
+/* ---------------------------------------  TEI ELEMENTS ------------------------------------ */
 
 p.caption {
     font-weight: bold;
-}
-.cb,
-.ed,
-small.l,
-small.l-n {
-    font-weight: normal;
-    font-style: normal;
-    float: right;
-    color: grey;
-    font-size: 65%;
-    margin: 0.2ex 0 0 1ex;
-    text-indent: 0;
-    text-decoration: none;
-    border: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-small.ed {
-    color: grey;
-    font-size: 90%;
-}
-
-h1.collection,
-h1.collection-sub {
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-}
-h1.collection {
-    text-transform: uppercase;
 }
 
 .drama > .opener > .dateline,
@@ -247,15 +163,12 @@ h1.desc {
     font-size: 117%;
 }
 
-.form {
-    font-weight: bold;
-}
-
 .lb {
     color: grey;
     font-size: 85%;
 }
-p.label,
+
+p.label, /*  titres de poèmes, etc. */
 div.label {
     margin: 0.7em 0;
     line-height: 110%;
@@ -281,6 +194,7 @@ p.note {
     margin-top: 1ex;
     margin-bottom: 1ex;
 }
+
 .note blockquote {
     margin: 1ex 0;
 }
@@ -334,51 +248,13 @@ h6.sub {
     font-weight: normal;
     font-style: italic;
 }
-.sourceDesc {
-}
-.subtitle {
-    font-style: italic;
-    font-weight: normal;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 200%;
-    margin-bottom: 2em;
-}
-section section .subtitle {
-    font-size: 150%;
-}
+
 .surname {
     font-variant: small-caps;
 }
-.trailer {
-    font-style: italic;
-    text-align: center;
-    text-indent: 0;
-    margin-top: 2em;
-}
-li.witness {
-    list-style: square;
-    font-size: 90%;
-}
-.witness label,
-a.wit,
-i.wit,
-a.msDesc {
-    font-style: italic;
-    color: #000;
-} /* witness letter */
-
 
 /* ----------------- @rend, @type useful classes, in alphabetic order ----------------- */
 
-.alert {
-    color: #971716;
-    font-size: 120%;
-}
-.attention {
-    color: red;
-}
 .b,
 .bold {
     font-weight: bold;
@@ -429,54 +305,39 @@ span.center {
     display: block;
 }
 
-.clear {
-    clear: both;
-}
-.clear:after {
-    content: " ";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-span.exquote {
-    font-style: normal;
-} /* seg[@type='exquote'] */
-.hanging {
-    margin-left: 1.5em;
-    text-indent: -1.5em
-}
-
-.justify {
-    text-align: justify;
-}
 .left,
 div.left {
     text-align: left;
 }
+
 .larger {
     font-size: larger;
     font-weight: bold;
 }
+
 .ls,
 .letter-spacing {
     letter-spacing: 0.4ex;
 }
+
 h1.main {
     margin-top: 1ex;
 }
+
 ul.menu {
     font-size: 85%;
     line-height: 95%;
 }
+
 .margin {
     margin-left: 20%;
     text-indent: 0
 }
+
 .noborder {
     border: none;
 }
+
 .normal,
 .n {
     quotes: '' '';
@@ -931,13 +792,13 @@ sub { /*  sub gère les appels de notes, les astérismes */
 
 sup { /*  sup = exposant */
     vertical-align: super;
-  /*   font-size: 75%;   
+    /* font-size: 75%;   
     line-height: 0;
     position: relative;
     vertical-align: baseline;
-    top: -0.5em; */ 
-    }
-    
+    top: -0.5em; */
+}
+
 sub {
     vertical-align: sub; /*  sub = indice */
 }
@@ -995,7 +856,6 @@ q q {
     font-size: 95%;
 }
 
-
 div.stage { /* paragraphe indépendant de didascalies */
     text-align: justify;
     margin-top: 2ex; /* 1 */
@@ -1011,13 +871,13 @@ div.stage { /* paragraphe indépendant de didascalies */
 
 /* ----------------- gestion des dialogues ------------------------ */
 
-.drama .treatise{
+.drama .treatise {
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 2em;
 }
 
-.drama p.speaker {  /*  idem que roman.min.css */
+.drama p.speaker { /*  idem que roman.min.css */
     text-align: center;
     font-variant: small-caps;
     margin: 1.5em 0 0.5em 0;
@@ -1135,8 +995,8 @@ div.l { /*  ligne unique de vers, y compris dans les poèmes */
     padding-left: 1.5rem;
 }
 
-.l.indent{ /* idem roman.min.css */
-      margin-left: 4em;  
+.l.indent { /* idem roman.min.css */
+    margin-left: 4em;
 }
 
 .quote div.l { /*  ligne unique de vers, hors poèmes */
@@ -1571,6 +1431,10 @@ colophon a {
     text-align: center;
 }
 
+nodisplay { /* gère César Birotteau (huile) */
+    display: none;
+}
+
 /* -------------------------------------------------  SELECTEURS INUTILES A PRIORI ---------------------------------------------- */
 
 aside header {
@@ -1670,4 +1534,128 @@ caption {
 form label {
     padding: 0;
     line-height: 100%;
+}
+
+li.bibl { /*  TEI, citation bibliographique */
+    list-style: circle;
+} /* like li.witness */
+
+blockquote .bibl {
+    margin-left: 2em;
+    display: block;
+}
+
+.epigraph {
+    text-align: right;
+    margin: 1em 0 2em 0;
+}
+
+.epigraph > .bibl {
+    font-size: 0.8em;
+    margin: 0.5em 2em 0 50%;
+}
+
+.epigraph > .p {
+    font-size: 0.8em;
+    text-align: justify;
+    margin: 1em 2em 1em 50%;
+}
+
+
+input[readonly],
+input.readonly {
+    background: #CCCCCC;
+}
+
+/* p { orphans: 2; widows: 2; } pb dans .sp */
+
+.argument { /* gère des listes ou une description en prose */
+    margin: 0 0 1em 0;
+    text-indent: 0;
+    font-style: italic;
+    text-align: justify;
+    font-size: 85%;
+    line-height: 105%;
+}
+
+p.argument {
+    font-style: normal;
+}
+
+.argument p {
+    text-indent: 0;
+}
+
+/* .back p, .front p { text-indent: 0; } no indent in paratext */
+
+.form {
+    font-weight: bold;
+}
+
+.sourceDesc {
+}
+
+.subtitle {
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 200%;
+    margin-bottom: 2em;
+}
+
+section section .subtitle {
+    font-size: 150%;
+}
+
+.trailer {
+    font-style: italic;
+    text-align: center;
+    text-indent: 0;
+    margin-top: 2em;
+}
+
+li.witness {
+    list-style: square;
+    font-size: 90%;
+}
+
+.witness label,
+a.wit,
+i.wit,
+a.msDesc {
+    font-style: italic;
+    color: #000;
+} /* witness letter */
+
+.alert {
+    color: #971716;
+    font-size: 120%;
+}
+.attention {
+    color: red;
+}
+
+.clear {
+    clear: both;
+}
+.clear:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+span.exquote {
+    font-style: normal;
+} /* seg[@type='exquote'] */
+.hanging {
+    margin-left: 1.5em;
+    text-indent: -1.5em
+}
+
+.justify {
+    text-align: justify;
 }
