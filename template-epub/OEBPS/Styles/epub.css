@@ -544,9 +544,35 @@ i .title,
     line-height: 2em;
 }
 
-.principal {
-    margin-bottom: 0.7em;
+.editor {
+    margin-bottom: 2em;
+}
+
+.editor p {
     font-weight: bold;
+    text-align: center;
+    text-indent: 0em;
+}
+
+div.resp {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    text-indent: 0;
+    margin-left: 0em;
+}
+
+div.resp p {
+    text-align: center;
+    text-indent: 0em;
+}
+
+p.resp {
+    text-indent: 0em;
+}
+
+div.publisher p {
+    text-align: center;
+    margin-top: 2em;
 }
 
 /* ---------------------------------- DEDICACES, PREFACES EN FRONT-1 ---------------------------------------- */
