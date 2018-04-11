@@ -993,10 +993,7 @@ tr.total td.i {
 .treatise .label {
     font-variant: small-caps;
 } /*  petites misères de la vie conjugale */
-table {
-    margin-top: 2em;
-    margin-bottom: 2em;
-} /*  petites misères de la vie conjugale */
+
 
 /* -------------- gestion des poèmes et vers seuls ---------------- */
 
@@ -1206,8 +1203,156 @@ no-edition .roman-html a.pb { /* Patho de la vie sociale */
 
 /* ------------------- gestion des images ----------------------*/
 
+.figure img { /* gère toutes les images */
+    border: none;
+    max-width: 100%; /* empêche les images plus grandes que le conteneur de déborder */
+}
+
+.figure > * {
+    display: inline-block;
+}
+
+.figure {
+    margin: 1em 0 1em 0;
+    text-align: center; /* attention, toutes les images sont centrées par défaut ici! */
+}
+
+
+figure {
+    display: block;
+    padding: 6px;
+    background: white;
+    margin: 0;
+    border: solid 1px #888888;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 a img {
     border: none;
+}
+
+/*  images particulières dans Les Employés */
+#balzac-50-FC-287 #img1 {
+    width: 30%;
+    margin-left: 70%;
+}
+
+/*  images particulières dans Le Contrat de mariage */
+#balzac-27-FC-268 #img1 {
+    text-align: center;
+    text-indent: 0;
+    width: 30%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* gère César Birotteau (huile) */
+nodisplay {
+    display: none;
+}
+
+/*  images particulières dans La Peau de chagrin */
+#balzac-64-FC-001 #img1 {
+    max-width: 50%;
+    margin-left: 40%;
+}
+
+#balzac-64-FC-026 #img2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    text-indent: 0;
+}
+
+/*  images particulières dans Physiologie du mariage */
+
+#balzac-84-FC-563 #img1,
+#balzac-84-FC-563 #img2 {
+    text-indent: 0;
+    max-width: 100%;
+}
+
+/*  images particulières dans Petites misères */
+
+#ill034 #img37{
+    max-width: 80%;
+}
+figure img {
+    /* padding: 6px;
+    max-width: 100%;
+    height: auto; */
+}
+
+/* Gestion des lettrines */
+.figure.lettrine > img {
+    min-width: 0.1%; /*  empêche le flottant de disparaître si la fenêtre est petite */
+    max-width: 25%;
+    min-height: 1%;
+    float: left;
+    margin-right: 0.5em;
+    position: relative;
+    text-align: left; /* empêche le flottant de quitter la page ! */
+}
+
+/*  Gestion des images flottantes à droite */
+.figure.float-right > img {
+    float: right;
+    max-width: 35%;
+    height: auto;
+ /* margin-right: -2.5em;  */
+    margin-left: 1em;
+}
+
+/*  Gestion des images flottantes à gauche */
+.figure.float-left > img {
+    float: left;
+    max-width: 35%;
+    height: auto;
+ /* margin-left: -2.5em;  */
+    margin-right: 1em;
+}
+
+/* gestion des culs-de-lampe */
+.figure.colophon {
+    padding-top: 1em;
+    max-width: 30%;
+    margin: auto;
+}
+
+/* gestion des petites images centrées */
+.figure.center > img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    max-width: 50%;
+    margin: auto;
+}
+
+/*  cas particuliers petites misères */
+#img5,
+#img6 {
+    max-width: 70%;
+}
+
+#ill017,
+#ill019 {
+    text-align: center;
+}
+
+/* gestion des images dans des tableaux */
+
+table {
+    margin-top: 0em; /* 2 */
+    margin-bottom: 0em; /* 2 */
+}
+
+.table tr td {  /*  force les tableaux à avoir des colonnes G/D identiques! */
+    width: 50%;
+}
+
+.table .p.autofirst.noindent{ /* centre les légendes des tableaux */
+    text-align: center;
 }
 
 #img125, /* petites misères de la vie conjugale */
@@ -1233,60 +1378,21 @@ a img {
     width: 15%;
 }
 
-#img1 { /*  les employés */
-    width: 30%;
-}
-#gobseck { /*  les employés */
-    text-align: right;
-}
-
-#img1 { /* la peau de chagrin */
-    width: 50%;
-}
-
-#fig1 { /* la peau de chagrin */
-    text-align: right;
-}
-
-.figure > * {
-    display: inline-block;
-}
-
-.figure {
-    line-height: 110%;
-    font-size: 85%;
-    margin: 1em 0 1em 0;
-    background: #EEE;
-    border: solid 1px #999;
-    text-align: center;
-}
-
-.figure.lettrine > img {
-    width: 35%;
-    float: left;
-    margin-left: -2.5em;
-    margin-right: 0.5em;
-}
-
-figure {
-    display: block;
-    padding: 6px;
-    background: white;
-    margin: 0;
-    border: solid 1px #888888;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+figure.center > img {
+    max-height: 300px;
+    width: auto;
 }
 
 .figure a {
     text-decoration: none;
     border-bottom: none;
 }
+
 .figure a:hover {
     text-decoration: none;
     border-bottom: none;
 }
+
 figure.left {
     float: left;
     margin: 15px 15px 8px 0;
@@ -1294,31 +1400,6 @@ figure.left {
 figure.right {
     float: right;
     margin: 15px 0 8px 15px;
-}
-
-.figure.float-left > img {
-    float: left;
-    width: 40%;
-    margin-left: -2.5em;
-    margin-right: 1em
-}
-
-.figure.float-right > img {
-    float: right;
-    width: 40%;
-    margin-right: -2.5em;
-    margin-left: 1em;
-}
-
-figure img {
-    padding: 6px;
-    max-width: 100%; /* idem roman.min.css */
-    height: auto; /* idem roman.min.css */
-}
-
-figure.center > img {
-    max-height: 300px;
-    width: auto;
 }
 
 figure a {
@@ -1455,10 +1536,6 @@ ol.tree > li {
 
 colophon a {
     text-align: center;
-}
-
-nodisplay { /* gère César Birotteau (huile) */
-    display: none;
 }
 
 /* -------------------------------------------------  SELECTEURS INUTILES A PRIORI ---------------------------------------------- */
