@@ -33,6 +33,15 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
   </xsl:template>
   <!-- default, stop all -->
   <xsl:template match="*" mode="epub"/>
+  <!-- ajout <br> dans la page du titre -->
+  <xsl:template match="/*/tei:text/tei:front//tei:docTitle/tei:titlePart" mode="tp">
+    <xsl:apply-templates mode="tp"/>
+  </xsl:template>
+  <xsl:template match="tei:lb" mode="tp">
+    <xsl:element name="br">
+      <xsl:attribute name="class">lb</xsl:attribute>
+    </xsl:element>
+  </xsl:template>
   <!-- cross roots -->
   <xsl:template match="tei:TEI/tei:text | tei:TEI.2/tei:text" mode="epub">
     <xsl:param name="type"/>
@@ -81,7 +90,8 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
               <xsl:element name="div"><xsl:attribute name="class">docTitle</xsl:attribute>
                 <xsl:for-each select="/*/tei:text/tei:front//tei:docTitle/tei:titlePart">
                 <xsl:element name="div">
-                  <xsl:attribute name="class">titlePart <xsl:value-of select="@type"/></xsl:attribute><xsl:value-of select="."/>
+                  <xsl:attribute name="class">titlePart <xsl:value-of select="@type"/></xsl:attribute>
+                  <xsl:apply-templates mode="tp"/>
                 </xsl:element>
               </xsl:for-each>
               </xsl:element>
@@ -91,6 +101,7 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
             </section>
       </xsl:with-param>
     </xsl:call-template>
+    
     <!-- Create a toc -->
     <xsl:call-template name="document">
       <xsl:with-param name="id">
@@ -254,7 +265,18 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
         <xsl:apply-templates select="tei:pb"/>
         <xsl:element name="{$name}" namespace="http://www.w3.org/1999/xhtml">
           <xsl:call-template name="atts"/>
-          <xsl:apply-templates select="node()[local-name() != 'pb']"/>
+          <xsl:choose><xsl:when test="descendant::tei:lb">
+            <xsl:element name="em">
+              <xsl:attribute name="class">part</xsl:attribute>
+            <xsl:value-of select="text()[1]"/>
+            </xsl:element>
+            <xsl:apply-templates select="tei:lb" mode="tp"/>
+            <xsl:value-of select="text()[2]"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="node()[local-name() != 'pb']"/>
+          </xsl:otherwise>
+          </xsl:choose>
         </xsl:element>
         <xsl:if test="not(following-sibling::tei:head)">
           <xsl:for-each select="parent::*[1]">
