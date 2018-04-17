@@ -117,7 +117,7 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
       <xsl:with-param name="content">
         <xsl:choose>
           <xsl:when test="$format = $epub2">
-            <h1>
+            <h1 class="framingRule">
               <xsl:call-template name="message">
                 <xsl:with-param name="id">toc</xsl:with-param>
               </xsl:call-template>
@@ -128,7 +128,7 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
             <nav>
               <xsl:attribute name="epub:type">toc</xsl:attribute>
               <xsl:attribute name="id">toc</xsl:attribute>
-              <h1>
+              <h1 class="framingRule">
                 <xsl:call-template name="message">
                   <xsl:with-param name="id">toc</xsl:with-param>
                 </xsl:call-template>
@@ -206,7 +206,7 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
           <xsl:value-of select="$doctitle"/>
         </xsl:with-param>
         <xsl:with-param name="content">
-          <h1>
+          <h1 class="framingRule">
             <xsl:copy-of select="$label"/>
           </h1>
           <xsl:call-template name="footnotes"/>
