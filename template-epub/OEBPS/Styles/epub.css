@@ -734,7 +734,7 @@ h1 { /*  concerne Avertissements, Crédits, titres de Parties, Notes */
     padding-top: 1em;
     margin-top: 0;
     height: 2em;
-    white-space: nowrap;
+    white-space: normal; /* empêche les titres de disparaître de la fenêtre s'ils sont agrandis */
 }
 
 h1 a,
@@ -901,6 +901,12 @@ div.stage { /* paragraphe indépendant de didascalies */
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 2em;
+}
+
+.treatise.q {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 1em;
 }
 
 .drama p.speaker { /*  idem que roman.min.css */
@@ -1268,15 +1274,33 @@ nodisplay {
 
 /*  images particulières dans Physiologie du mariage */
 
-#balzac-84-FC-563 #img1,
+#balzac-84-FC-563 #img1 {
+    text-indent: 0;
+    max-width: 100%;
+    text-align: center;
+    display: inline;
+}
+
+#p564 { /*  indispensable! */
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 0.7em;
+}
+
 #balzac-84-FC-563 #img2 {
     text-indent: 0;
     max-width: 100%;
+    text-align: center;
+}
+
+#p565 { /*  indispensable! */
+    margin-left: 50%;
+    margin-right: 50%;
 }
 
 /*  images particulières dans Petites misères */
 
-#ill034 #img37{
+#ill034 #img37 {
     max-width: 80%;
 }
 figure img {
@@ -1301,7 +1325,7 @@ figure img {
     float: right;
     max-width: 35%;
     height: auto;
- /* margin-right: -2.5em;  */
+    /* margin-right: -2.5em;  */
     margin-left: 1em;
 }
 
@@ -1310,7 +1334,7 @@ figure img {
     float: left;
     max-width: 35%;
     height: auto;
- /* margin-left: -2.5em;  */
+    /* margin-left: -2.5em;  */
     margin-right: 1em;
 }
 
@@ -1347,11 +1371,11 @@ table {
     margin-bottom: 0em; /* 2 */
 }
 
-.table tr td {  /*  force les tableaux à avoir des colonnes G/D identiques! */
+.table tr td { /*  force les tableaux à avoir des colonnes G/D identiques! */
     width: 50%;
 }
 
-.table .p.autofirst.noindent{ /* centre les légendes des tableaux */
+.table .p.autofirst.noindent { /* centre les légendes des tableaux */
     text-align: center;
 }
 
@@ -1453,6 +1477,11 @@ hr.footnotes {
 
 /* ---------------------------------- TABLE DES MATIERES & LISTES ---------------------------------------- */
 
+.more.front { /*  gère les parties additionnelles dans la TOC */
+    display: none;
+}
+
+
 ul.none,
 ol.none,
 ul.simple,
@@ -1537,6 +1566,7 @@ ol.tree > li {
 colophon a {
     text-align: center;
 }
+
 
 /* -------------------------------------------------  SELECTEURS INUTILES A PRIORI ---------------------------------------------- */
 
@@ -1677,8 +1707,9 @@ input.readonly {
     text-indent: 0;
     font-style: italic;
     text-align: justify;
-    font-size: 85%;
+    font-size: 80%;
     line-height: 105%;
+    display: none; /* ou visibility : hidden; */
 }
 
 p.argument {
@@ -1687,6 +1718,10 @@ p.argument {
 
 .argument p {
     text-indent: 0;
+}
+
+#body-4-3 p.p span.sc { /* concerne uniquement les listes de Méditations dans Physio du mariage */
+    font-size: 80%;
 }
 
 /* .back p, .front p { text-indent: 0; } no indent in paratext */
