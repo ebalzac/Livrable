@@ -468,13 +468,16 @@ i .title,
     margin-top: 2em;
 }
 
-.framingRule {
+.editionStmt>.framingRule, /* gère uniquement la page d'avertissements */
+.credits>.framingRule {
     border-bottom: 0.05em solid;
     border-top: 0.05em solid;
     display: inline-block;
-    width: 100%;
     padding: 0;
     line-height: 2em;
+    width: 100%;
+    margin-left:0;
+    margin-right: 0;
 }
 
 .editor {
@@ -1453,6 +1456,17 @@ hr.footnotes {
 }
 
 /* ---------------------------------- TABLE DES MATIERES & LISTES ---------------------------------------- */
+
+.framingRule { /* gère la TOC et la footnotes */
+    border-bottom: 0.05em solid;
+    border-top: 0.05em solid;
+    display: inline-block;
+    padding: 0;
+    line-height: 2em;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
 
 .more.front { /*  gère les parties additionnelles dans la TOC */
     display: none;
