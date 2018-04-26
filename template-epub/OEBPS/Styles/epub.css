@@ -916,6 +916,10 @@ p .autofirst {
     margin-bottom: 0.9ex;
 }
 
+.sp .p.autofirst{
+text-indent: 1em;
+}
+
 .stage .i,
 .stage em,
 .stage i {
@@ -1004,6 +1008,14 @@ div .poem { /* poème */
     font-size: 100%;
 }
 
+div.poem { /* concerne la Muse du Dept */
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+    font-size: 100%;
+}
+
 div.lg { /*  groupe de vers */
     margin-top: 1.2em; /* 0.7 */
     margin-bottom: 1.2em; /* 0.7 */
@@ -1027,6 +1039,10 @@ div.l { /*  ligne unique de vers, y compris dans les poèmes */
 
 .poem .indent { /*  indentation de certains poèmes */
     margin-left: 2em;
+}
+
+div.poem.q.lg div.l.first.i{
+    text-indent: 0;
 }
 
 /* ---------------- gestion des lettres ------------------ */
