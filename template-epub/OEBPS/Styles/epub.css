@@ -255,7 +255,9 @@ h5.head {
     line-height: 1.5em;
 }
 
-h2.head em.part{
+h3.head em.part,
+h2.head em.part,
+h2.head {
     font-style: normal;
 }
 
