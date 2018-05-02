@@ -255,6 +255,10 @@ h5.head {
     line-height: 1.5em;
 }
 
+h2.head em.part{
+    font-style: normal;
+}
+
 .b,
 .bold {
     font-weight: bold;
@@ -525,6 +529,12 @@ section.preface {
 
 .dedication {
     font-style: italic;
+}
+
+/* centre les salute dans les front-1 uniquement */
+section#front-1.div.dedication.level2 div.salute {
+    text-align: center;
+    font-style: normal;
 }
 
 .salute.dedication { /* histoire des treize */
@@ -998,6 +1008,12 @@ tr.total td.i { /*  petites misères de la vie conjugale, illusions perdues */
     font-variant: small-caps;
 }
 
+/* -------------------- gestion des ornements --------------------- */
+
+div.ab.ornament {
+    margin-bottom: 2em;
+}
+
 /* -------------- gestion des poèmes et vers seuls ---------------- */
 
 div .poem { /* poème */
@@ -1043,6 +1059,12 @@ div.l { /*  ligne unique de vers, y compris dans les poèmes */
 
 div.poem.q.lg div.l.first.i{
     text-indent: 0;
+}
+
+/* concerne uniquement La Muse du Dept */
+div.poem.q.l{
+    text-indent: 0 !important;
+    margin-left: 0.91em !important;
 }
 
 /* ---------------- gestion des lettres ------------------ */
@@ -1098,6 +1120,10 @@ div .letter { /*  blancs autour des lettres */
     text-indent: 0;
     text-align: right;
     margin-right: 1.7em; /*  retrait à droite des signatures */
+}
+
+section#front-1 .closer .signed {
+    font-size: 1.1em;
 }
 
 .sc,
@@ -1537,12 +1563,21 @@ li blockquote p {
 
 ol.tree {
     margin-left: 10%;
-    margin-top: 3.5em;
+    margin-top: 3em;
     padding-left: 0;
 }
 
 ol.tree > li {
     line-height: 1.5em; /* Interlignage liste TOC */
+}
+
+nav#toc ol.tree{
+    margin-top: 0em; 
+    margin-left: 5%;
+}
+
+nav#toc li.more{
+    margin-top: 0.5em;
 }
 
 .framingRuleSmall {
