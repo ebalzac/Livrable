@@ -1319,25 +1319,32 @@ nodisplay {
     text-indent: 0;
 }
 
+
+
 /*  images particulières dans Physiologie du mariage */
 
-#balzac-84-FC-563 #img1 {
-    text-indent: 0;
-    max-width: 100%;
+section#body-4-3-1.div.level4 div#fig1.figure img#img1 {
     text-align: center;
-    display: inline;
+    vertical-align: middle;
+    text-indent: 0;
+    max-height: 95%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-#p564 { /*  indispensable! */
+#p564 {
     margin-left: 50%;
     margin-right: 50%;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.7em; 
 }
 
-#balzac-84-FC-563 #img2 {
-    text-indent: 0;
-    max-width: 100%;
+section#body-4-3-1.div.level4 div#fig1.figure img#img2 {
     text-align: center;
+    vertical-align: middle;
+    text-indent: 0;
+    max-height: 95%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #p565 { /*  indispensable! */
