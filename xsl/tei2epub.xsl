@@ -86,7 +86,7 @@ https://kdp.amazon.com/self-publishing/help?topicId=A1JPUWCSD6F59O
                 <xsl:attribute name="class">docAuthor</xsl:attribute>
                 <xsl:value-of select="/*/tei:text/tei:front//tei:docAuthor"/>
               </xsl:element>
-              <xsl:element name="div"><xsl:attribute name="class">rule</xsl:attribute></xsl:element>
+              <div class="rule"></div>
               <xsl:element name="div"><xsl:attribute name="class">docTitle</xsl:attribute>
                 <xsl:for-each select="/*/tei:text/tei:front//tei:docTitle/tei:titlePart">
                 <xsl:element name="div">
