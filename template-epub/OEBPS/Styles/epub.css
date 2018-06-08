@@ -428,12 +428,6 @@ i .title,
     margin-bottom: 0.5em;
 }
 
-.rule { /* filet sous le nom de l'auteur */
-    border-bottom: 0.08em solid;
-    display: inline-block;
-    width: 7%;
-}
-
 .titlePart.group { /*  "La Comédie humaine" */
     font-size: 140%;
     margin-top: 0.7em;
