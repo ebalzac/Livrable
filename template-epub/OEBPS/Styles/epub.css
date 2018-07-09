@@ -482,18 +482,20 @@ i .title,
     margin-right: 0;
 }
 
-.editor {
-    margin-bottom: 2em;
+.editor{
+    margin-bottom: 0.8em;
 }
 
 .editor p {
-    font-weight: bold;
     text-align: center;
     text-indent: 0em;
 }
 
+.editor .resp {
+    font-weight: bold;
+}
+
 div.resp {
-    margin-top: 0.8em;
     margin-bottom: 0.8em;
     text-indent: 0;
     margin-left: 0em;
