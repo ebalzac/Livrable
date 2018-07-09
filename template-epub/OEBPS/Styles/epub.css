@@ -426,7 +426,7 @@ i .title,
     font-size: 125%;
     font-variant: small-caps;
     margin-bottom: 0.5em;
-}
+}e
 
 .titlePart.group { /*  "La Comédie humaine" */
     font-size: 140%;
@@ -502,10 +502,12 @@ div.resp {
 div.resp p {
     text-align: center;
     text-indent: 0em;
+    font-weight: normal;
 }
 
 p.resp {
     text-indent: 0em;
+    font-weight: normal;
 }
 
 div.publisher p {
